@@ -5,5 +5,6 @@ app_name = 'dev'
 
 urlpatterns = [
     path('', views.Top.as_view(), name='top'),
-    path('request/', views.RequestList.as_view(), name='request_list')
+    path('request/', views.RequestCreate.as_view(), name='request_form'),
+    path('request/list/', views.RequestList.as_view(), name='request_list')
 ]
