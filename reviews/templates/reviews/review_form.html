@@ -1,0 +1,13 @@
+{% extends 'reviews/base.html' %}
+
+{% block content %}
+<form action="" method="POST">
+  {% csrf_token %}
+  {{ form.as_p }}
+  {% comment %} 更新ページのみ作成日時を表示 {% endcomment %}
+  {% if form.instance.pk %}
+    <p>{{ form.instance.created_at }}</p>
+  {% endif %}
+  <button type="submit">送信</button>
+</form>
+{% endblock %}

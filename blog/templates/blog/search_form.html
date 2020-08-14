@@ -1,0 +1,34 @@
+<p class="menu-label">検索フォーム</p>
+<form action="{% url 'blog:post_list' %}" method="GET">
+  <div class="control">
+    <div class="control">
+      {{ form.key_word }}
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="control">
+      <div class="select">
+        {{ form.category }}
+      </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="control">
+      <div class="select is-multiple">
+        {{ form.tags }}
+      </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="control">
+      <div class="select">
+        {{ form.user }}
+      </div>
+    </div>
+  </div>
+
+  <button class="button is-primary" type="submit">検索</button>
+</form>

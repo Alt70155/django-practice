@@ -1,0 +1,12 @@
+{% extends 'diaries/base.html' %}
+
+{% block content %}
+  {% for diary in diary_list %}
+    <article>
+      <!-- テンプレートフィルタ -->
+      <time>{{ diary.created_at | date:'Y/n/j G:i' }}</time> - <span class="category">{{ diary.category }}</span>
+      <br>
+      <p>{{ diary.text }}</p>
+    </article>
+  {% endfor %}
+{% endblock %}

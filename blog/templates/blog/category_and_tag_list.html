@@ -1,0 +1,13 @@
+<p class="menu-label">カテゴリー一覧</p>
+<ul class="menu-list">
+  {% for category in category_list %}
+    <li><a href="{% url 'blog:post_category_list' category.pk %}">{{ category }}</a></li>
+  {% endfor %}
+</ul>
+
+<p class="menu-label">タグ一覧</p>
+<ul class="menu-list">
+  {% for tag in tag_list %}
+    <li><a href="{% url 'blog:post_tag_list' tag.pk %}">{{ tag }}</a></li>
+  {% endfor %}
+</ul>
