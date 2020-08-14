@@ -1,0 +1,8 @@
+{% extends 'dev/base.html' %}
+
+{% block content %}
+  <h1>出勤希望一覧</h1>
+  {% for request in request_list %}
+    <p>{{ request.date }}　出勤可否：{{ request.get_is_possible_display }}</p>
+  {% endfor %}
+{% endblock %}
